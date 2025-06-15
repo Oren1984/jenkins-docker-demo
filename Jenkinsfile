@@ -8,14 +8,6 @@ pipeline {
         DOCKER_HUB_CREDENTIALS = 'docker-hub-creds'
     }
 
-    stages {
-        stage('Checkout') {
-            steps {
-                // שליפת הקוד מהריפוזיטורי
-                git 'https://github.com/Oren1984/jenkins-docker-demo.git'
-            }
-        }
-
         stage('Docker Build') {
             steps {
                 script {
